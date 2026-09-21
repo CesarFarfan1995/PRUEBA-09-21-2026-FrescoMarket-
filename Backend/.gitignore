@@ -1,0 +1,7 @@
+node_modules/
+.env
+uploads/*
+!uploads/.gitkeep
+!uploads/leche.png
+!uploads/pan.png
+!uploads/detergente.png

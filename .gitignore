@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+Backend/uploads/*
+!Backend/uploads/.gitkeep
+!Backend/uploads/leche.png
+!Backend/uploads/pan.png
+!Backend/uploads/detergente.png
+!Backend/uploads/.gitkeep
+Backend/node_modules
+Frontend/node_modules
+Frontend/dist
