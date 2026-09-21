@@ -48,27 +48,9 @@ npm run dev
 
 La API queda en `http://localhost:4000`.
 
-Rutas:
 
-| Método       | Ruta                 | Auth |
-| ------------ | -------------------- | ---- |
-| POST         | `/api/auth/register` | No   |
-| POST         | `/api/auth/login`    | No   |
-| GET / POST   | `/api/products`      | JWT  |
-| PUT / DELETE | `/api/products/:id`  | JWT  |
 
-Las rutas de productos usan `authMiddleware`: sin token Bearer válido responden `401`. Cada usuario solo ve y modifica sus productos.
 
-## Cómo explicar el código (mapa rápido)
-
-1. `Backend/src/app.js` — Express, CORS, estáticos de `/uploads` y registro de rutas.
-2. `Backend/src/middleware/auth.middleware.js` — lee el JWT y deja el usuario en `req.user`.
-3. `Backend/src/modules/auth` — registro/login con bcrypt + JWT. Cada controller usa `try/catch` y `next(error)`.
-4. `Backend/src/middleware/error.middleware.js` — convierte el error en `{ message, field }` para el frontend.
-5. `Backend/src/modules/products` — CRUD, imagen con multer, ownership por `userId`.
-6. `Frontend/src/context/AuthContext.tsx` — guarda token en `localStorage`.
-7. `Frontend/src/components/ProtectedRoute.tsx` — redirige a login si no hay token.
-8. `Frontend/src/pages/ProductsPage.tsx` — listado y formulario de productos.
 
 ## 3. Frontend
 
