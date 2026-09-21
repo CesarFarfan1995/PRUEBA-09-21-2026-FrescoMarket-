@@ -11,16 +11,16 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/registro" element={<RegisterPage />} />
+          <Route path="/register" element={<RegisterPage />} />
           <Route
-            path="/productos"
+            path="/products"
             element={
               <ProtectedRoute>
                 <ProductsPage />
               </ProtectedRoute>
             }
           />
-          <Route path="*" element={<Navigate to="/productos" replace />} />
+          <Route path="*" element={<Navigate to="/products" replace />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

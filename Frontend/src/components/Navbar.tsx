@@ -7,7 +7,7 @@ export function Navbar() {
   return (
     <header className="border-b border-[#d9e2d6] bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-        <Link to="/productos" className="flex items-center gap-2">
+        <Link to="/products" className="flex items-center gap-2">
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#2f6b4f] text-sm font-bold text-white">
             FS
           </span>

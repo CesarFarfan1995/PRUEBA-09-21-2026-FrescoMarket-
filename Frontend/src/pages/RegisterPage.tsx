@@ -13,7 +13,7 @@ export function RegisterPage() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  if (token) return <Navigate to="/productos" replace />;
+  if (token) return <Navigate to="/products" replace />;
 
   function validate(): Record<string, string> {
     const next: Record<string, string> = {};

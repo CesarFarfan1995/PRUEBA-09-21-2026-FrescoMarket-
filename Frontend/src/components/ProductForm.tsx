@@ -199,7 +199,9 @@ export function ProductForm({ product, onClose, onSaved }: ProductFormProps) {
         </div>
 
         {preview && (
-          <img src={preview} alt="Vista previa" className="mb-3 h-32 w-full rounded-lg object-cover" />
+          <div className="mb-3 flex h-48 w-full items-center justify-center overflow-hidden rounded-lg bg-[#eef3ea]">
+            <img src={preview} alt="Vista previa" className="max-h-full max-w-full object-contain" />
+          </div>
         )}
 
         <div className="mb-3 grid grid-cols-2 gap-3">

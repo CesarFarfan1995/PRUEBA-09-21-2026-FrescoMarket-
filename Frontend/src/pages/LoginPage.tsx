@@ -12,7 +12,7 @@ export function LoginPage() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  if (token) return <Navigate to="/productos" replace />;
+  if (token) return <Navigate to="/products" replace />;
 
   function validate(): Record<string, string> {
     const next: Record<string, string> = {};
@@ -91,7 +91,7 @@ export function LoginPage() {
         </button>
         <p className="mt-4 text-center text-sm text-[#5d6b64]">
           ¿No tienes cuenta?{' '}
-          <Link to="/registro" className="font-semibold text-[#2f6b4f]">
+          <Link to="/register" className="font-semibold text-[#2f6b4f]">
             Regístrate
           </Link>
         </p>
